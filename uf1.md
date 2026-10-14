@@ -39,3 +39,6 @@ Porque no solo ayuda a organizar mejor el trabajo dentro de la empresa, sino que
 | 1. Avances tecnológicos | Las nuevas tecnologías permiten trabajar de forma más rápida y eficiente. | Una empresa de software utiliza inteligencia artificial para ayudar a detectar errores en el código. |
 | 2. Cambios en los clientes | Los clientes esperan servicios digitales rápidos, accesibles y adaptados a sus necesidades. | Una empresa de soporte informático ofrece una plataforma online para que los clientes comuniquen incidencias. |
 | 3. Competencia y nuevos modelos de negocio | Las empresas necesitan adaptarse a los cambios tecnológicos para seguir siendo competitivas. | Una empresa de alojamiento web ofrece servidores en la nube mediante una suscripción mensual. |
+
+## **EC1.6 Una empresa, dos momentos**
+El momento A representa una situación anterior a la digitalización, con procesos manuales y una gestión más tradicional. El momento B representa una transformación digital, porque no solo incorpora herramientas tecnológicas, sino que también cambia la forma de gestionar los proyectos, captar clientes y organizar las ventas. Además, utiliza datos para analizar su presencia en internet y mejorar sus resultados.
