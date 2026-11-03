@@ -13,23 +13,19 @@
 | 7 | Software de copias de seguridad de servidores | X | | |
 | 8 | Control de accesos de un edificio (tarjetas) | | | X |
 
-**Nota:** He puesto el MES como mix porque hace de puente entre la planta (PLC) y la parte de gestión (ERP). El control de accesos también lo veo así, ya que maneja algo físico (las puertas) pero va conectado a la red de la oficina.
-
----
+El MES y el control de accesos los he puesto como mix porque conectan la parte física con la red y la gestión de la empresa.
 
 ## EC2.2 Departamentos IT de una empresa
 
-*Empresa de referencia:* una pyme de software como servicio (SaaS).
+Empresa de referencia: una empresa de software SaaS.
 
 | Área / Departamento | ¿Qué gestiona? | ¿Por qué es entorno IT? |
 |---------------------|----------------|--------------------------|
-| Desarrollo | El código y el producto | Trabaja puramente con software y datos |
-| Sistemas / Infraestructura | Servidores, redes y cloud | Es la base técnica que sostiene a toda la empresa |
-| Ciberseguridad | Accesos, incidentes y protección de datos | Se encarga de cuidar la información y los sistemas |
-| Soporte / Helpdesk | Las incidencias de usuarios y clientes | Atiende los equipos y las aplicaciones |
-| Datos / BI | Informes y análisis de datos | Trata la información de negocio |
-
----
+| Desarrollo | Programa y mantiene el software | Todo su trabajo es con software y datos |
+| Sistemas | Servidores, redes y nube | Mantiene los equipos informáticos de la empresa |
+| Ciberseguridad | Accesos y protección de datos | Protege la información de la empresa |
+| Soporte | Problemas de usuarios y clientes | Ayuda con equipos y programas |
+| Datos / BI | Informes y análisis | Trabaja con los datos del negocio |
 
 ## EC2.3 Tecnología de negocio vs. de planta
 
@@ -44,59 +40,51 @@
 | BI / Data Warehouse | X | |
 | Robots colaborativos (cobots) | | X |
 
----
-
 ## EC2.4 Qué hace que IT y OT se parezcan y se diferencien
 
 | Aspecto | IT | OT |
 |---------|----|----|
-| Coincidencia 1 | Usa redes para comunicar equipos entre sí | También, y cada vez más utilizando Ethernet/IP |
-| Coincidencia 2 | Necesita mantenimiento y control de accesos | Igual: hay que dar mantenimiento a los equipos y controlar quién entra |
-| Coincidencia 3 | Maneja datos que hay que proteger | También maneja datos, concretamente los del proceso productivo |
-| Diferencia 1 | Lo más importante es que los datos sean confidenciales | Lo más importante es que todo esté disponible y sea seguro para las personas |
-| Diferencia 2 | Los equipos se renuevan cada pocos años y se actualizan con frecuencia | Los equipos duran décadas y casi nunca se pueden parar para actualizar |
-| Diferencia 3 | Si falla, se pierde información o cae algún servicio | Si falla, puede haber daños en las máquinas o incluso en las personas |
-
----
+| Coincidencia 1 | Usa redes para conectar equipos | También usa redes, cada vez más parecidas a las de IT |
+| Coincidencia 2 | Hay que mantener los equipos | También hay que mantener las máquinas y los sistemas |
+| Coincidencia 3 | Maneja datos importantes | También, sobre todo datos de la producción |
+| Diferencia 1 | Lo más importante es proteger los datos | Lo más importante es que no se pare y que sea seguro para las personas |
+| Diferencia 2 | Los equipos se cambian y se actualizan a menudo | Las máquinas duran muchos años y no se pueden parar fácilmente para actualizarlas |
+| Diferencia 3 | Un fallo puede perder datos o dejar un servicio sin funcionar | Un fallo puede romper máquinas o ser peligroso para las personas |
 
 ## EC2.5 Convergencia IT-OT de una consultora IT (BIT Consultores)
 
-**1. ¿Cuál es el entorno IT de BIT y cuál el OT que entra en casa del cliente?**  
-El entorno IT de BIT son sus propias oficinas, sus servidores, la nube y las herramientas que usan los técnicos. El entorno OT que les toca ahora es el del cliente: la línea de producción, la sala de servidores y la climatización donde van a meter mano instalando sensores.
+**1. ¿Cuál es el entorno IT de BIT? ¿Y cuál es el entorno OT que ahora entra en casa del cliente?**
+El IT de BIT son sus oficinas, sus servidores, la plataforma en la nube y los ordenadores de los técnicos. El OT es el del cliente: la línea de producción, la sala de servidores y la climatización, que es donde se ponen los sensores.
 
-**2. ¿Qué sistema hace de puente entre los dos entornos?**  
-Los sensores IoT junto con su pasarela (gateway), que son los encargados de pillar los datos de la planta y mandarlos hacia la nube.
+**2. ¿Qué sistema hace de puente entre los dos entornos?**
+Los sensores IoT y la pasarela (gateway) que manda sus datos a la nube.
 
-**3. ¿Qué tecnología permite ver el estado de la línea a 500 km en tiempo real?**  
-La conexión a Internet combinada con la nube y el IoT (lo que en la industria llaman IIoT).
+**3. ¿Qué tecnología permite ver la línea de producción a 500 km?**
+Internet junto con la nube y el IoT.
 
-**4. ¿Qué ventajas tiene para el cliente industrial?**  
-Pues que te ahorras paradas imprevistas porque pillas los fallos antes, reduces costes en mantenimiento y en viajes, respondes más rápido y tienes datos reales para decidir mejor.
+**4. ¿Qué ventajas tiene para el cliente industrial?**
+Hay menos paradas porque los fallos se ven antes, se gasta menos en mantenimiento y en viajes, se responde más rápido y se pueden tomar mejores decisiones con los datos.
 
-**5. ¿Qué riesgo nuevo introduce?**  
-Antes la planta solía estar totalmente aislada de Internet. Al conectarla ahora, se abre la puerta a ciberataques desde fuera que podrían jorobar la producción.
-
----
+**5. ¿Qué riesgo nuevo introduce?**
+Antes la planta no estaba conectada a Internet y ahora sí, así que puede recibir ciberataques desde fuera.
 
 ## EC2.6 Ventajas de una digitalización de extremo a extremo (DeltaCode)
 
 | Ámbito | Ventaja | Justificación |
 |--------|---------|---------------|
-| Operativo | Datos en tiempo real | El dato viaja solo desde el sensor o el MES hasta el SaaS sin pasos manuales, así que nadie tiene que meterlo a mano. |
-| Cliente | Menos roturas de stock | El inventario se actualiza solo según lo que va pasando en producción. |
-| Soporte | Anticiparse a los fallos | El NOC 24×7 ve las alertas y puede actuar antes de que el cliente tenga que parar la máquina. |
-| Económico | Ingresos recurrentes | En vez de cobrar horas sueltas de programación, pillan una suscripción mensual fija. |
-| Escalabilidad | Un producto para muchas pymes | Con el mismo SaaS sirven a todos los clientes sin tener que reprogramar desde cero para cada uno. |
-
----
+| Operativo | Datos en tiempo real | Los datos pasan del sensor al SaaS sin que nadie tenga que meterlos a mano. |
+| Cliente | Menos faltas de stock | El inventario se actualiza solo con lo que pasa en producción. |
+| Soporte | Se evitan averías | El NOC vigila las 24 horas y avisa de los problemas antes de que paren la producción. |
+| Económico | Ingresos fijos | Cobran una suscripción mensual en vez de horas sueltas. |
+| Escalabilidad | Un producto para muchas pymes | El mismo SaaS sirve para todos los clientes sin programar de nuevo. |
 
 ## EC2.7 Riesgos de conectar OT a Internet (planta de packaging)
 
 | Riesgo | Medida de mitigación |
 |--------|----------------------|
-| Acceso no autorizado al SCADA | Usar VPN con autenticación de doble factor (MFA) y no dejar nunca el SCADA abierto directamente a Internet. |
-| Ransomware que llegue desde IT o Internet y pare la planta | Separar las redes IT y OT usando un firewall industrial y una DMZ. |
-| Sistemas viejos que no se pueden parchear | Hacer un inventario de lo que hay, meterlos en su propia red aislada y aplicar parcheo virtual. |
-| Cagarla con acciones erróneas o maliciosas del proveedor en remoto | Dar acceso solo de lectura por defecto, con sesiones que caduquen y queden registradas. |
-| Protocolos industriales sin cifrar (como Modbus) | Usar túneles cifrados y pasarelas seguras. |
-| Caída de la conexión a Internet | Configurar la planta para que pueda tirar en local si se cae la red, sin depender de estar siempre online. |
+| Acceso sin permiso al SCADA | Usar VPN con contraseña y doble verificación, y no dejarlo abierto a Internet |
+| Virus o ransomware desde la red de la oficina | Separar la red de la planta de la de la oficina con un firewall |
+| Equipos viejos que no se pueden actualizar | Ponerlos en una red aparte y vigilarlos |
+| Errores del proveedor cuando se conecta | Que solo pueda mirar y no cambiar nada, con acceso temporal y un registro de lo que hace |
+| Datos que viajan sin cifrar | Enviarlos por un canal cifrado, como una VPN |
+| Se cae Internet | Que la planta pueda seguir funcionando sola, sin depender de la conexión |
